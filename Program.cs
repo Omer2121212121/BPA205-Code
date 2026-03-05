@@ -1,134 +1,162 @@
-﻿using System.Net.Mime;
-using System.Numerics;
-using System.Runtime.CompilerServices;
-using System.Text;
-
-namespace ConsoleApp3;
-
-internal class Program
+﻿namespace Task2
 {
-    static void Main(string[] args)
+    internal class Program
     {
-        //Task 1 
-        ////float orta = 0;
-        ////int say = 0;
-        ////int cem = 0;
-        ////int m = int.Parse(Console.ReadLine());
-        ////for (int i = 0; i <= m; i++)
-        ////{
-        ////    if (i % 15 == 0)
-        ////    {
-        ////        cem =cem + i;
-        ////        say++;
-        ////    }
-        ////}
-        //Task 2 
-        ////orta = cem/say;
-        //////Console.WriteLine(orta);
-        ////int n = int.Parse(Console.ReadLine());
-        ////for (int i = n; i < 100; i++)
-        ////{
-        ////    if (i % 21 == 0)
-        ////    {
-        ////        Console.WriteLine(i);
-        ////    }
+        static void Main(string[] args)
+        {
+            //Task1
+            //int[] arr = [1, 2, 3, 4, 5, 6, 7, 8];
+            //int max = arr[0];
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (max < arr[i])
+            //    {
+            //        max = arr[i];
+            //    }
+            //}
+            //Console.WriteLine(max);
+            //Task2
+            //string ad = "Omer";
+            //char herf = 'a';
+            //bool tapildi = false;
+            //for (int i = 0; i < ad.Length; i++)
+            //{
+            //    if (herf == ad[i])
+            //    {
+            //        tapildi = true;
+            //        break;
+            //    }
+            //    else 
+            //    {
+            //        tapildi = false;
+            //    }
+            //}
+            //Console.WriteLine(tapildi);
+            //Task3
+            //string sayt = Console.ReadLine();
+            //bool duzdur = false;
+            //for (int i = 0; i < sayt.Length - 2; i++)
+            //{
+            //    if (sayt[i] == '.' && sayt[i + 1] == 'a' && sayt[i + 2] == 'z')
+            //    {
+            //        duzdur = true;
+            //        break;
+            //    }
+            //    else
+            //    {
+            //        duzdur = false;
+            //    }
+            //}
+            //Console.WriteLine(duzdur);
+            //Task4
+            //string cumle = Console.ReadLine();
+            //string soz = Console.ReadLine();
+            //bool tapildi = false;
+            //string bosluq = "";
+            //for (int i = 0; i < cumle.Length; i++)
+            //{
+            //    if (cumle[i] != ' ')
+            //    {
+            //        bosluq = bosluq + cumle[i];
+            //    }
+            //    else
+            //    {
+            //        if(bosluq == soz)
+            //        {
+            //            tapildi = true;
+            //            break;
+            //        }
+            //        bosluq = "";
+            //    }
+            //}
+            //if (soz == bosluq)
+            //{
+            //    tapildi = true;
+            //}
+            //Console.WriteLine(tapildi);
+            //Task5
+            //string cumle = Console.ReadLine();
+            //string bosluq = "";
+            //string cavab = "";
 
-        ////}
-        //Task 3
-        ////int n = int.Parse(Console.ReadLine());
-        ////int reqem = 0;
-        ////while (n > 0) 
-        ////{
-        ////    reqem = reqem + n%10;
-        ////    n = n / 10;
-        ////}
-        ////Console.WriteLine(reqem);
-        //Task 4
-        //int[] arr = [2, 3, 4, 5, 6, 7];
-        //int vurma = 1;
-        //for (int i = 0; i < arr.Length; i++)
-        //{
-        //    if (arr[i] % 2 == 0)
-        //    {
-        //        vurma = arr[i] * vurma;
-        //    }
-        //}
-        //Console.WriteLine(vurma);     
-        //Task 5
-        //int[] arr = [2, 3, 4, 5, 6, 7];
-        //int cem = 0;
-        //for (int i = 0; i < arr.Length; i++)
-        //{
-        //    if (arr[i] % 2 == 0)
-        //    {
-        //        cem = arr[i] + cem;
-        //    }
-        //}
-        //Console.WriteLine(cem);
-        //Task 6
-        //int eded = int.Parse(Console.ReadLine());
-        //int fakt = 1;
-        //for (int i = 1; i < eded; i++)
-        //{
-        //    fakt = fakt*(i+1);
-        //}
-        ////Console.WriteLine(fakt);
-        //Task 7
-        //int n = int.Parse(Console.ReadLine());
-        //int hasil = 1;
-        //while (n > 0)
-        //{
-        //    hasil = hasil * n % 10;
-        //    n = n / 10;
-        //}
-        //Console.WriteLine(hasil);
-        //Task 8
-        //int n = int.Parse(Console.ReadLine());
-        //int a = 0;
-        //int b = 1;
-        //int daxil = 0;
-        //while (a  <= n) {
-        //    Console.WriteLine(a);
-        //    daxil = a + b;
-        //    a = b;
-        //    b = daxil;
-        //}
-        //Task 9
-        //int[] arr = [1, 2, 3, 4, 5, 6, 7, 8];
-        //int a = arr.Length / 2;
-        //float median = 0;
-        //if (a % 2 == 1)
-        //{
-        //    Console.WriteLine(arr[a]);
-        //}
-        //else
-        //{
-        //    median = (arr[a - 1] + arr[a + 1]) / 2;
-        //    Console.WriteLine(median);
-        //}
-        //Task 10
-        //int[] arr = [1, 2, 3, 4, 5, 6, 7, 8];
-        //int max = arr[0];
-        //int min = arr[0];
-        //float median = 0;
-        //for (int i = 0; i < arr.Length; i++)
-        //{
-        //    if (max < arr[i])
-        //    {
-        //        max = arr[i];
-        //    }
-        //    else if (min > arr[i])
-        //    {
-        //        min = arr[i];
-        //    }
-        //}
-        //Console.WriteLine(max);
-        //Console.WriteLine(min);
-        //Sert operatoru isletmeden tek veya cut oldugunu bilmey 
-        //string[] arr = ["Cutdur", "Tekdir"];
-        //int n = int.Parse(Console.ReadLine());
-        //Console.Write(arr[n % 2]);
+            //// Cümləni sonuna qədər gəzirik
+            //for (int i = 0; i < cumle.Length; i++)
+            //{
+            //    if (cumle[i] != ' ')
+            //    {
+            //        bosluq = bosluq + cumle[i];
+            //    }
+            //    else
+            //    {
+            //        if (bosluq.Length > 0)
+            //        {
+            //            string yeniSoz = "";
+            //            yeniSoz += char.ToUpper(bosluq[0]);
+
+            //            for (int j = 1; j < bosluq.Length; j++)
+            //            {
+            //                yeniSoz += bosluq[j];
+            //            }
+
+            //            cavab = cavab + yeniSoz + " ";
+            //            bosluq = "";
+            //        }
+            //    }
+            //}
+            //if (bosluq.Length > 0)
+            //{
+            //    string yeniSoz = "";
+            //    yeniSoz += char.ToUpper(bosluq[0]);
+            //    for (int j = 1; j < bosluq.Length; j++)
+            //    {
+            //        yeniSoz += bosluq[j];
+            //    }
+            //    cavab = cavab + yeniSoz;
+            //}
+
+            //Console.WriteLine(cavab);
+            //Task6
+            //int[] arr = [1, 2, 3, 4, 5, 6, 7, 8];
+            //int max = arr[0];
+            //int min = arr[0];
+            //float median = 0;
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (max < arr[i])
+            //    {
+            //        max = arr[i];
+            //    }
+            //    else if (min > arr[i])
+            //    {
+            //        min = arr[i];
+            //    }
+            //}
+            //Console.WriteLine(max);
+            //Console.WriteLine(min);
+            //Task7
+            //string cumle = Console.ReadLine();
+            //string bosluq = "";
+            //string cavab = "";
+            //for (int i = 0; i < cumle.Length; i++)
+            //{
+            //    if (cumle[i] != ' ')
+            //    {
+            //        bosluq += cumle[i];
+            //    }
+            //    else
+            //    {
+            //        if (bosluq.Length > 0)
+            //        {
+            //            cavab = cavab + bosluq + "%20";
+            //            bosluq = "";
+            //        }
+            //    }
+            //}
+            //if (bosluq.Length > 0)
+            //{
+            //    cavab = cavab + bosluq;
+            //}
+            //Console.WriteLine(cavab);
+        }
     }
 }
-
-
